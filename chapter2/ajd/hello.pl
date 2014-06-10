@@ -3,4 +3,9 @@
 use strict;
 use warnings;
 
-print "Hello dudes\n";
+if ( getpwuid( $< ) eq 'sdt' ) {
+  print "Hello bitches\n";
+}
+else {
+  print "Hello dudes\n";
+}
