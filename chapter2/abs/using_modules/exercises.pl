@@ -42,7 +42,7 @@ sub two {
 }
 
 sub three {
-	my $radius = LearningPerl::Interactive::capture_numeric_input( 'Enter Radius: ' );
+	my $radius = capture_numeric_input( 'Enter Radius: ' );
 	my $circumference = circumference( $radius > 0 ? $radius : 0 );
 	my $format = '%.' . precision . 'f';
 	my $formatted_circumference = sprintf( $format, $circumference );
@@ -50,15 +50,15 @@ sub three {
 }
 
 sub four {
-	my $first = LearningPerl::Interactive::capture_numeric_input( 'Enter 1st number: ' );
-	my $second = LearningPerl::Interactive::capture_numeric_input( 'Enter 2st number: ' );
+	my $first = capture_numeric_input( 'Enter 1st number: ' );
+	my $second = capture_numeric_input( 'Enter 2st number: ' );
 	my $multiplied = $first * $second;
 	CORE::say( "$first * $second = $multiplied" );
 }
 
 sub five {
-	my $word = LearningPerl::Interactive::capture_input( 'Enter word to repeat: ' );
-	my $repeat = LearningPerl::Interactive::capture_numeric_input( 'How many times would you like to repeat that? ' );
+	my $word = capture_input( 'Enter word to repeat: ' );
+	my $repeat = capture_numeric_input( 'How many times would you like to repeat that? ' );
 	print( ( $word . $/ ) x $repeat );
 }
 
