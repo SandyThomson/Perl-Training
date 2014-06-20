@@ -15,5 +15,5 @@ foreach my $name_index ( @name_indexes ) {
     next;
   }
 
-  print( names->[$name_index] . $/ );
+  print( "$name_index is the index for: " . names->[$name_index] . $/ );
 }
