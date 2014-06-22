@@ -3,12 +3,20 @@
 use strict;
 use warnings;
 
+use Scalar::Util qw( looks_like_number );
+
 sub total {
   my ( @numbers ) = @_;
+  chomp( @numbers );
 
   my $total;
   foreach my $number ( @numbers ) {
-    $total += $number;
+    if ( looks_like_number( $number ) ) {
+      $total += $number;
+    }
+    else {
+      print "Can't add '$number'\n";
+    }
   }
 
   return $total;
