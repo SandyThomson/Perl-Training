@@ -2,11 +2,12 @@
 
 use strict;
 use warnings;
-
-my $person;
+use 5.010;
 
 sub greet {
   my ( $new_person ) = @_;
+
+  state $person;
 
   if ( defined( $person ) ) {
     print "Hi $new_person! $person is also here!\n";

@@ -2,11 +2,12 @@
 
 use strict;
 use warnings;
-
-my @persons;
+use 5.010;
 
 sub greet {
   my ( $new_person ) = @_;
+
+  state @persons;
 
   if ( scalar( @persons ) ) {
     print "Hi $new_person! I've seen: @persons\n";
