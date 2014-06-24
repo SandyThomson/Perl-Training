@@ -15,8 +15,8 @@ if( !@input ) {
   warn "Your list is empty!\n";
 }
 else {
-	say "Your list, in input reversed:";
-	say "=" x 20;
+  say "Your list, in input reversed:";
+  say "=" x 20;
 
-	print @input;
+  print @input;
 }
