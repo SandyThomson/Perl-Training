@@ -13,7 +13,7 @@ sub get_indexes {
   say "Please enter a list of integers >= 0 on seperate lines (Press Ctrl-D [EOF] to stop input)";
   say "=" x 20;
 
-  while( my $input = <STDIN> ){  # Limit of 500 collected integers
+  while( my $input = <STDIN> ){ 
     if( looks_like_number($input) && $input =~ /^\d+$/ ){
       if( $input >= 0 && $input <= $#flintstones ){
         push @list_indexes, $input;
