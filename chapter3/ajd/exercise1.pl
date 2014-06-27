@@ -10,4 +10,4 @@ chomp( @list_of_strings = <STDIN> );
 
 # Just a reverse and print
 @list_of_strings = reverse( @list_of_strings );
-print( reverse @list_of_strings );
+print( "@list_of_strings\n" );
