@@ -1,0 +1,12 @@
+fred.txt line01, The quick brown fox jumps over the lazy dog
+fred.txt line02, The quick brown fox jumps over the lazy dog
+fred.txt line03, The quick brown fox jumps over the lazy dog
+fred.txt line04, The quick brown fox jumps over the lazy dog
+fred.txt line05, The quick brown fox jumps over the lazy dog
+fred.txt line06, The quick brown fox jumps over the lazy dog
+fred.txt line07, The quick brown fox jumps over the lazy dog
+fred.txt line08, The quick brown fox jumps over the lazy dog
+fred.txt line09, The quick brown fox jumps over the lazy dog
+fred.txt line10, The quick brown fox jumps over the lazy dog
+fred.txt line11, The quick brown fox jumps over the lazy dog
+fred.txt line12, The quick brown fox jumps over the lazy dog

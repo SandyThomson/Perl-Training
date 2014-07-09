@@ -1,0 +1,32 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use constant DEFAULT_COLUMN_WIDTH => 20;
+
+print "Enter the column width to use\n";
+
+my $col_width = <STDIN>;
+chomp $col_width;
+if ( $col_width !~ /^[0-9]+$/ ) {
+  my $invalid_width = $col_width;
+  $col_width = DEFAULT_COLUMN_WIDTH;
+  print "Column width [$invalid_width] is not numeric, using default of [$col_width]\n";
+}
+
+print "Enter a list of strings on separate lines\n";
+
+my @list_of_strings;
+while ( <STDIN> ) {
+  chomp;
+  push @list_of_strings, $_;
+}
+
+print "1234567890" x 8 . "\n";
+
+while ( @list_of_strings ) {
+  my $curr_string = shift @list_of_strings;
+  printf "%${col_width}s\n", $curr_string;
+}
+
