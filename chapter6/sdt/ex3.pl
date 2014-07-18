@@ -2,7 +2,6 @@
 
 use strict;
 use warnings;
-use Data::Dumper;
 
 use 5.010; # 'say'
 
@@ -13,7 +12,6 @@ foreach my $key (keys %ENV){
     $maxkeylength = length $key;
   }
 }
-
 
 foreach my $key ( keys %ENV){
   printf "%-*s", $maxkeylength+1, $key;
