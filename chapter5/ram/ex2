@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use 5.014;
+
+print "Enter a list of strings on separate lines\n";
+
+my @list_of_strings;
+while ( <STDIN> ) {
+  chomp;
+  push @list_of_strings, $_;
+}
+
+print "1234567890" x 8 . "\n";
+
+while ( @list_of_strings ) {
+  my $curr_string = shift @list_of_strings;
+  printf "%20s\n", $curr_string;
+}
+
