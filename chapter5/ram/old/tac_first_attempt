@@ -1,0 +1,38 @@
+#!/usr/bin/perl
+
+#
+# tac - program to reverse the order and contents of a set of input files
+#       usage: tac [filename ...]
+#              filename: name of a file to reverse
+#
+
+use strict;
+use warnings;
+
+my @files_to_process = @ARGV;
+my $curr_fn;
+while ( @files_to_process ) {
+  $curr_fn = pop @files_to_process;
+  tac_file( $curr_fn );
+}
+
+sub tac_file {
+  my ( $fn ) = @_;
+
+  my $fh;
+  open $fh, '<', $fn
+    or die "Could not open $fn: $!";
+
+  my @lines;
+  while ( <$fh> ) {
+    chomp;
+    push @lines, $_;
+  }
+
+  while ( @lines ) {
+    print( reverse( pop @lines ) . "\n" );
+  }
+
+  close $fh;
+}
+
