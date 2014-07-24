@@ -16,7 +16,7 @@ my %date_fields = (
   );
 
 my $current = DateTime->from_epoch( epoch => time );
-my $user_defined = DateTime->new( \%date_fields );
+my $user_defined = new DateTime( \%date_fields );
 
 my $difference = $current - $user_defined;
 
