@@ -14,6 +14,10 @@ $^I = '.tmp';
 
 # Replace
 while ( <> ) {
+  # The e switch executes the replace block as perl code, then
+  # uses that to replace whatever matches. Also, it turns out that
+  # if you try to use a regex inside another regex, the inner one
+  # needs the slash delimiters more than the outside one.
   s{(fred|wilma)}{($1 =~ /fred/i) ? 'Wilma' : 'Fred'}ige;
   print;
 }
