@@ -19,7 +19,7 @@ foreach my $file ( @ARGV ) {
   }
 
   # Call this once to save on reads
-  my $age = -C $file;
+  my $age = -C _;
 
   if ( $age > $eldest_file_age ) {
     $eldest_file = $file;
