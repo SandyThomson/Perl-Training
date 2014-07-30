@@ -13,6 +13,7 @@ alpha.bravo
 charlie.
 .delta
 Bamm-Bamm
+foo--bar
 Mississippi
 Llama
 llama
