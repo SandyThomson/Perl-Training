@@ -2,6 +2,7 @@ fred flintstone
 Fred Flintstone
 barney rubble
 Wilma Flintstone (fred's wife)
+wilma
 Fred
 FRed
 FRED
@@ -17,4 +18,3 @@ Llama
 llama
 wilma and fred
 fred and wilma
-
