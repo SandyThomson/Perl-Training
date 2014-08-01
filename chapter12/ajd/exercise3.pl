@@ -10,20 +10,15 @@ chomp( $input );
 
 if ( $input eq '' ) {
   # Surely no one would log in as root just to break this?
-  $input = "/home/" . getlogin(); # getlogin is useful, but don't rely on it for auth apparently
+  $input = "/home/" . getlogin();
   print "Defaulting to $input\n";
 }
 
 if ( -d $input ) {
   chdir $input;
 
-  # So a glob is easier
-  #my @files = sort glob '*';
-
-  # I prefer directory handles though
-  opendir( my $dir, '.' ) || die ( "Can't open directory $input: $!\n" );
-  my @files = sort ( grep !/\./, readdir( $dir ) );
-  closedir( $dir );
+  # glob-o-time
+  my @files = sort ( glob '* .*' );
 
   print "@files\n";
 }
