@@ -9,8 +9,8 @@ my $input = <STDIN>;
 chomp( $input );
 
 if ( $input eq '' ) {
-  # Surely no one would log in as root just to break this?
-  $input = "/home/" . getlogin(); # getlogin is useful, but don't rely on it for auth apparently
+  # Could have used File::HomeDir for this, if I thought this may ever be run on Windows
+  $input = $ENV{HOME};
   print "Defaulting to $input\n";
 }
 

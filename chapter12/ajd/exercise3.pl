@@ -9,8 +9,7 @@ my $input = <STDIN>;
 chomp( $input );
 
 if ( $input eq '' ) {
-  # Surely no one would log in as root just to break this?
-  $input = "/home/" . getlogin();
+  $input = $ENV{HOME};
   print "Defaulting to $input\n";
 }
 
