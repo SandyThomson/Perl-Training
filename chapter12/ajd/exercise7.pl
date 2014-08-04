@@ -14,7 +14,7 @@ GetOptions (
     );
 
 if ( scalar( @ARGV ) < 2 ) {
-  die( "Creates a link. Usage: perl $0 <file> <destination>\n" );
+  die( "Creates a link, optionally a symlink. Usage: perl $0 [-s|--symbolic|--soft] <file> <destination>\n" );
 }
 
 my ( $target, $destination ) = @ARGV;
