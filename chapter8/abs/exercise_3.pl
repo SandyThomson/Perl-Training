@@ -4,11 +4,13 @@ use strict;
 use warnings;
 use feature qw( say );
 
-say( "Enter some input containing the word 'match'..." );
+say( "Enter a word ending with an 'a'..." );
 while ( <> ) {
   chomp;
-  if ( /match/ ) {
+  if ( /\b(\w*a)\b/ ) {
     say( "Matched: |$`<$&>$'|" );
+    # numeric group capture
+    say( "\$1 contains $1" );
   } else {
     say( "No match: |$_|" );
   }
