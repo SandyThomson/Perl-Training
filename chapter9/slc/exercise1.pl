@@ -2,11 +2,10 @@
 use strict;
 use warnings;
 
-print "Enter some text to match 3 times: ";
-chomp(my $what = <STDIN>);
+my $what = 'fred|barney';
 while(<>) {
 	chomp;
-	if ( /($what){3}/ ) {
+	if ( /(?:$what){3}/ ) {
 		print "Matched: [$_]\n";
 	}
 }
