@@ -24,24 +24,21 @@ while ( my $guess = <STDIN> ) {
     }
     when ( !/\A-??\d+(?:\.\d+)??\z/ ) {
       print "A number I said, try harder: ";
-      next;
     }
 
     # Spaceship trickery doesn't work with a switch
     when ( $guess < $number ) {
       print "Too low, try again: ";
-      next;
     }
     when ( $guess > $number ) {
       print "Too high, try again: ";
-      next;
     }
     when ( $guess == $number ) {
       print "Correct!\n";
       last;
     }
     default {
-      next;
+      # Do nothing
     }
   }
 }
