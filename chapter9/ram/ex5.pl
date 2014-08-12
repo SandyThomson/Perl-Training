@@ -19,9 +19,10 @@ while ( <> ) {
 print("Modified list, once files already containing change have been removed:\n");
 print( join(", ", sort keys %files_to_update), "\n");
 
+# Filter the argument list
 @ARGV = keys %files_to_update;
 
-# Only do this if there are files to update!
+# Only process if there are files to update!
 if ( @ARGV ) {
   $^I = ".bak";
   
