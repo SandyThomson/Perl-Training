@@ -21,10 +21,13 @@ print( join(", ", sort keys %files_to_update), "\n");
 
 @ARGV = keys %files_to_update;
 
-$^I = ".bak";
-
-while ( <> ) {
-  s|(?<firstline>^#!/usr/bin/perl.*$)|$+{firstline}\n## Copyright (C) by Yours Truly|ig;
-  print;
+# Only do this if there are files to update!
+if ( @ARGV ) {
+  $^I = ".bak";
+  
+  while ( <> ) {
+    s|(?<firstline>^#!/usr/bin/perl.*$)|$+{firstline}\n## Copyright (C) by Yours Truly|ig;
+    print;
+  }
 }
 
