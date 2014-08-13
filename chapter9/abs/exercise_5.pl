@@ -34,7 +34,6 @@ $^I = '.out';
 my $year = [localtime(time)]->[5] + 1900;
 
 while (<>) {
-	s/(?<shebang>#!.*\n)/$+{shebang}$copyright (C) $year by Arran Stobbs\n/;
-## Copyright (C) 2014 by Arran Stobbs
+	s/(?<shebang>^#!.*\n)/$+{shebang}$copyright (C) $year by Arran Stobbs\n/;
 	print;
 }
