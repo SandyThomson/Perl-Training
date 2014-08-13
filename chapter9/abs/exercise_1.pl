@@ -5,9 +5,8 @@ use warnings;
 
 my $what = 'fred|barney';
 
-$_ = 'fredfredbarney';
 while (<>) {
-	if ( /($what){3}/ ) {
+	if ( /$what{3}/ ) {
 		print( "Matches pattern '$what'", "\n");
 	}
 	else {
