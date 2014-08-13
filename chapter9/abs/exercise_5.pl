@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-## Copyright (C) 2014 by Arran Stobbs
 
 use strict;
 use warnings;
