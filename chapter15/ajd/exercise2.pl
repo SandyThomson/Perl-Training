@@ -9,10 +9,11 @@ use 5.010001;
 # and Sausage instead of 7.
 # Weird.
 
-print "Type numbers:\n";
+print "Type numbers:\n"; # or pipe in a file, whichever works
 
 while ( my $number = <> ) {
   chomp ( $number );
+  # Print the message or the number if there is no message
   print ( ( fizz_bin_sausage( $number ) || $number ) , "\n" ) ;
 }
 
