@@ -4,10 +4,14 @@ use strict;
 use warnings;
 
 $^I = '.out';
-my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime(time);
-$year = sprintf("%02d", $year % 100);
+
+# grab the year(6th value) from the return array
+# of &localtime. this is the number of years since
+# 1990, so add this for the actual current year
+my $year = [localtime(time)]->[5] + 1900;
+my $copyright = "## Copyright (C) $year by Arran Stobbs\n";
 
 while (<>) {
-	s/(#!.*\n)/$1## Copyright (C) $year by Arran Stobbs\n/;
+	s/(?<shebang>#!.*\n)/$+{shebang}$copyright/;
 	print;
 }
