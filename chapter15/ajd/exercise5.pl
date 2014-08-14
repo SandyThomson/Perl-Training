@@ -40,6 +40,7 @@ given ( $number ) {
     }
 
   }
+  # ugh, bored of switches now
 }
 
 sub divisors {
