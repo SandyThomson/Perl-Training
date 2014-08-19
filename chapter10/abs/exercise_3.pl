@@ -8,6 +8,11 @@ main();
 sub main {
   my $longest_key = 0;
   my $longest_value = 0;
+	
+	# start with _ to make appear last
+	$ENV{_RANDOM_1} = undef;
+	$ENV{_RANDOM_2} = defined;
+	$ENV{_RANDOM_3} = undef;
 
   while ( my ( $key, $value ) = each( %ENV ) ) {
     # find longest key/value length
@@ -33,7 +38,7 @@ sub print_table {
 
   # print each pair of the ENV hash
   foreach my $key ( sort( keys( %ENV ) ) ) {
-    printf( $format, $key_length, $key, $value_length, $ENV{$key} );
+    printf( $format, $key_length, $key, $value_length, ( $ENV{$key} // 'undefined value' ) );
     _print_divider( $table );
   }
 }
