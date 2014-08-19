@@ -2,7 +2,6 @@
 
 use strict;
 use warnings;
-use Data::Dumper;
 
 # Capture the contents of a directory with grep,
 # stat the atime and mtime, then format it nicely
