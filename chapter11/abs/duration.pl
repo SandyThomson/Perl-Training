@@ -5,7 +5,6 @@ use warnings;
 
 use feature qw( say );
 
-use Data::Dumper;
 use DateTime;
 
 my ( $year, $month, $day ) = ( @ARGV );
