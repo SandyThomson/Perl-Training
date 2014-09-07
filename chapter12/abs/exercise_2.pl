@@ -20,18 +20,19 @@ sub _find_oldest_file {
 	my ( @files ) = @_;
 	
 	# set starting point
-	my %oldest_file = ( file => '', age => -1 );
-	foreach my $file ( @files ) {
+	my $file = '';
+	my $age = -1 ;
+	foreach my $new_file ( @files ) {
 	
 		# if the file exists set file age else default to -1
-		my $age = ( -e $file ) ? -M $file : -1;
+		my $new_age = ( -e $new_file ) ? -M $new_file : -1;
 		
-		if ( $age > $oldest_file{age} ) {
+		if ( $new_age > $age ) {
 			# update oldest file
-			$oldest_file{file} = $file;
-			$oldest_file{age} = $age;
+			$file = $new_file;
+			$age = $new_age;
 		}
 	}
 	
-	return ( $oldest_file{file}, $oldest_file{age} );
+	return ( $file, $age );
 }

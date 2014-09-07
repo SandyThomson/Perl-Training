@@ -23,7 +23,7 @@ foreach my $file ( @ARGV ) {
 		next;
 	}
 	
-	if ( -r -w -o $file ) {
+	if ( -e $file && -r -w -o $file ) {
 		$table->add_row( $file, 'yes', 'yes', 'yes' );
 	}
 }

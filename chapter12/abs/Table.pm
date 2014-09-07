@@ -57,13 +57,14 @@ sub _update_column_widths {
 use overload fallback => 1, '""' => sub { 
 	my ( $self ) = @_;
 
+	my $divider = $self->_table_divider();
 	# divider > header > divider
-	my $output = $self->_table_divider();
+	my $output = $divider;
 	$output .= $self->_get_row_output( $self->{_info}->{headers} );
-	$output .= $self->_table_divider();
+	$output .= $divider;
 	# foreach row: row > divider
 	foreach my $row_ref ( @{$self->{_rows}} ) {
-		$output .= $self->_get_row_output( $row_ref )	. $self->_table_divider();
+		$output .= $self->_get_row_output( $row_ref )	. $divider;
 	}
 	return $output;
 };
