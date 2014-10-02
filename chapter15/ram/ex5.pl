@@ -14,6 +14,14 @@ given( $input_value ) {
   when( $_ <= 1 ) {
     say "Input value is not a positive number greater than 1";
   }
+  when( $_ % 2 ~~ 0 ) {
+    say "The number $input_value is even";
+    continue;
+  }
+  when( $_ % 2 ~~ 1 ) {
+    say "The number $input_value is odd";
+    continue;
+  }
   default {
     say determine_prime( $_ );
   }
