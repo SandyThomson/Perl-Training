@@ -1,0 +1,13 @@
+total 388
+-rw------- 1 datacash  datacash      0 Sep 30 15:22 17937.jsvc_up
+-rw------- 1 dc-tomcat nogroup       0 Sep 30 15:22 17944.jsvc_up
+drwx------ 2 mpm       mpm        4096 Oct  6 13:19 bundler20141006-20140-1ian79p
+drwx------ 2 datacash  datacash   4096 Sep 30 15:22 hsperfdata_datacash
+drwxr-xr-x 2 dc-tomcat nogroup    4096 Oct  2 16:14 hsperfdata_dc-tomcat
+drwxr-xr-x 2 jenkins   hudson     4096 Sep 30 14:16 hsperfdata_jenkins
+drwxr-xr-x 2 jenkins   hudson     4096 Oct  3 12:23 jna
+drwxr-xr-x 2 dc-tomcat root       4096 Oct  2 16:14 tomcat6-tomcat6-tmp
+-rw-r--r-- 1 dc-tomcat nogroup    3350 Oct  2 16:17 velocity.log
+-rw-r--r-- 1 jenkins   hudson   361342 Sep 30 14:16 winstone4237243259532242707jar
+drwxr-xr-x 3 jenkins   hudson     4096 Sep 30 14:16 winstone.tmp
+
