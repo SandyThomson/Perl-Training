@@ -3,4 +3,5 @@
 use strict;
 use warnings;
 
-system( 'ls', '-l', '/' );
+chdir( '/' );
+system( 'ls', '-l' );
