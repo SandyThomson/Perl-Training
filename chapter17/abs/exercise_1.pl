@@ -7,6 +7,7 @@ use Try::Tiny;
 
 use feature qw( say );
 
+say( "Enter Input(CTRL-D when finish)?" ) if ( scalar( @ARGV ) == 0 );
 my @lines = <>;
 
 say( "Enter Pattern?" );
