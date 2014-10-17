@@ -1,0 +1,11 @@
+t you’ve seen so far is the core of Perl, the part that you as a Perl user should
+understand. But there are many other techniques that, while not obligatory, are still
+valuable tools to have in your toolbox. We’ve gathered the most important of those for
+this chapter. This also segues into the continuation of this book, Intermediate Perl,
+which is your next step in Perl.
+Don’t be misled by the title of the chapter, though; the techniques here aren’t especially
+more difficult to understand than those that you’ve already seen. They are “advanced”
+merely in the sense that they aren’t necessary for beginners. The first time you read this
+book, you may want to skip (or skim) this chapter so you can get right to using Perl.
+Come back to it a month or two later, when you’re ready to get even more out of Perl.
+Consider this entire chapter a huge footnote.1
